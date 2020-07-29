@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/Inbox1/inboxdata.dart';
+import 'package:tiktok_clone/inbox2.dart';
 import 'package:tiktok_clone/resources/assets.dart';
 import 'package:tiktok_clone/resources/dimen.dart';
+import 'package:tiktok_clone/signup.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override
@@ -112,26 +115,45 @@ class _BottomNavigation extends State<BottomNavigation> {
                   ),
                   Expanded(
                     flex: 1,
-                    child: Column(
-                      children: <Widget>[
-                        Icon(AppIcons.messages, color: Colors.white, size: 20),
-                        Padding(
-                          padding: EdgeInsets.only(top: Dimen.textSpacing),
-                          child: Text(
-                            "Inbox",
-                            style: TextStyle(
-                                fontSize: Dimen.bottomNavigationTextSize,
-                                color: Colors.white),
-                          ),
-                        )
-                      ],
+                    child: GestureDetector(
+                      onTap: () {
+                        // await Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (BuildContext context) =>
+                        //             inbox2screen()));
+                      },
+                      child: Column(
+                        children: <Widget>[
+                          Icon(AppIcons.messages,
+                              color: Colors.white, size: 20),
+                          Padding(
+                            padding: EdgeInsets.only(top: Dimen.textSpacing),
+                            child: Text(
+                              "Inbox",
+                              style: TextStyle(
+                                  fontSize: Dimen.bottomNavigationTextSize,
+                                  color: Colors.white),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Expanded(
                     flex: 1,
                     child: Column(
                       children: <Widget>[
-                        Icon(AppIcons.profile, color: Colors.white, size: 20),
+                        GestureDetector(
+                            onTap: () async {
+                              await Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (BuildContext context) =>
+                                          Signup()));
+                            },
+                            child: Icon(AppIcons.profile,
+                                color: Colors.white, size: 20)),
                         Padding(
                           padding: EdgeInsets.only(top: Dimen.textSpacing),
                           child: Text(
