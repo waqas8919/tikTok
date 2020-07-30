@@ -52,6 +52,8 @@ flutter:
   assets:
     - assets/images/avatar.png
     - assets/images/person.png
+    - assets/images/google.png
+    - assets/images/facebook.png
 
   fonts:
     - family:  TikTokIcons

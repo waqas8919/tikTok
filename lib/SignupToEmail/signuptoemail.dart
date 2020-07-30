@@ -45,7 +45,7 @@ class _emailHomeState extends State<emailHome> {
         leading: IconButton(
           onPressed: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (BuildContext bc) => Signup()));
+                MaterialPageRoute(builder: (BuildContext bc) => SignupPage()));
           },
           icon: Icon(
             Icons.arrow_back,
