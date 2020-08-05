@@ -247,7 +247,7 @@ class _emailHomeState extends State<emailHome> {
                     children: <Widget>[
                       RaisedButton(
                         padding: EdgeInsets.symmetric(vertical: 12.0),
-                        color: btn1,
+                        color: Colors.grey[200],
                         onPressed: () {
                           Navigator.push(
                               context,

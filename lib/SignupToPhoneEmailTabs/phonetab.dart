@@ -95,6 +95,7 @@ class _PhoneTabState extends State<PhoneTab> {
                 SizedBox(
                   height: 20.0,
                 ),
+                
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Column(
@@ -204,6 +205,7 @@ class _PhoneTabState extends State<PhoneTab> {
                     ],
                   ),
                 ),
+                
                 SizedBox(
                   height: 25.0,
                 ),
@@ -213,7 +215,7 @@ class _PhoneTabState extends State<PhoneTab> {
                       children: <Widget>[
                         Expanded(
                           child: RaisedButton(
-                            color: btn1,
+                            color: Colors.grey[200],
                             elevation: 0,
                             highlightColor: Colors.pink,
                             padding: EdgeInsets.symmetric(vertical: 13.0),

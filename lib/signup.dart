@@ -189,7 +189,7 @@ void _openPopup(context) {
         return Container(
           height: MediaQuery.of(context).size.height * .90,
           child: Padding(
-            padding: const EdgeInsets.all(12.0),
+            padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0),
             child: Column(
               children: <Widget>[
                 Row(
@@ -242,7 +242,7 @@ void _openPopup(context) {
                     elevation: 0.0,
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
-                        color: Colors.grey,
+                        color: facebook_br,
                         width: 0.5,
                       ),
                     ),
@@ -265,9 +265,9 @@ void _openPopup(context) {
                             child: Text(
                               "Use phone or email",
                               style: TextStyle(
-                                fontSize: 15.0,
-                                color: usephoneemail_text,
-                              ),
+                                  fontSize: 16.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600),
                             ),
                           )
                         ],
@@ -314,7 +314,9 @@ void _openPopup(context) {
                             child: Text(
                               "Signup with Facebook",
                               style: TextStyle(
-                                  fontSize: 15.0, color: facebook_text),
+                                  fontSize: 16.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600),
                             ),
                           )
                         ],
@@ -361,8 +363,9 @@ void _openPopup(context) {
                             child: Text(
                               "Signup with Google",
                               style: TextStyle(
-                                fontSize: 15.0,
-                              ),
+                                  fontSize: 16.0,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600),
                             ),
                           )
                         ],
@@ -373,12 +376,56 @@ void _openPopup(context) {
                 SizedBox(
                   height: 45.0,
                 ),
-                new Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: <Widget>[Text('testing')],
-                ),
+                new Expanded(
+                    child: new Align(
+                        alignment: Alignment.bottomCenter,
+                        child: new Row(
+                          children: <Widget>[
+                            Expanded(
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: new Text(
+                                  "By continue, you agree to tiktok,Terms of use and confirms that you read tiktok privacy policies.",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ))),
+                new Align(
+                    alignment: Alignment.bottomCenter,
+                    child: new Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Container(
+                            height: 50,
+                            color: Colors.grey[100],
+                            child: Center(
+                                child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              mainAxisSize: MainAxisSize.min,
+                              children: <Widget>[
+                                new Text(
+                                  "Already Have an Account?",
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                                FlatButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    child: Text(
+                                      'Log In',
+                                      style: TextStyle(
+                                          color: Colors.red, fontSize: 16),
+                                    ))
+                              ],
+                            )),
+                          ),
+                        ),
+                      ],
+                    ))
               ],
             ),
           ),

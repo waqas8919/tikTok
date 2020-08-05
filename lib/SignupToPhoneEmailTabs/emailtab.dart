@@ -120,7 +120,7 @@ class _EmailTabState extends State<EmailTab> {
                   children: <Widget>[
                     Expanded(
                       child: RaisedButton(
-                        color: btn1,
+                        color: Colors.grey[200],
                         padding: EdgeInsets.symmetric(vertical: 10.0),
                         onPressed: () {},
                         child: Text(
