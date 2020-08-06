@@ -78,7 +78,6 @@ class _BottomNavigation extends State<BottomNavigation> {
                     flex: 1,
                     child: Column(
                       children: <Widget>[
-                    
                         Container(
                             width: 45.0,
                             height: 32.0,
@@ -111,7 +110,6 @@ class _BottomNavigation extends State<BottomNavigation> {
                                 ),
                               )),
                             ]))
-                    
                       ],
                     ),
                   ),
@@ -154,8 +152,7 @@ class _BottomNavigation extends State<BottomNavigation> {
                                       builder: (BuildContext context) =>
                                           SignupPage()));
                             },
-                            child:
-                             Icon(AppIcons.profile,
+                            child: Icon(AppIcons.profile,
                                 color: Colors.white, size: 20)),
                         Padding(
                           padding: EdgeInsets.only(top: Dimen.textSpacing),

@@ -1,29 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:tiktok_clone/SignupToPhoneEmailTabs/phonetab.dart';
-import 'package:tiktok_clone/SignupToPhoneEmailTabs/emailtab.dart';
-import 'package:tiktok_clone/SignupToEmail/password.dart';
-import 'package:tiktok_clone/SignupToEmail/createUsername.dart';
-import 'package:tiktok_clone/SignupToEmail/selectcountry.dart';
-import 'package:tiktok_clone/SignupToEmail/entercode.dart';
-import 'package:tiktok_clone/SignupToEmail/signuptoemail.dart';
+import 'package:tiktok_clone/SignupToEmail/NewEmailTab.dart';
+import 'package:tiktok_clone/SignupToEmail/NewPhoneTab.dart';
+import 'package:tiktok_clone/signup.dart';
 
-class SignUpPhoneEmail extends StatelessWidget {
+class NewSignUpPhoneEmail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignUpPhoneEmailHome(),
+      home: NewSignUpPhoneEmailHome(),
     );
   }
 }
 
-class SignUpPhoneEmailHome extends StatefulWidget {
+class NewSignUpPhoneEmailHome extends StatefulWidget {
   @override
   _SignUpPhoneEmailHomeState createState() => _SignUpPhoneEmailHomeState();
 }
 
-class _SignUpPhoneEmailHomeState extends State<SignUpPhoneEmailHome>
+class _SignUpPhoneEmailHomeState extends State<NewSignUpPhoneEmailHome>
     with SingleTickerProviderStateMixin {
   TabController tb;
   @override
@@ -41,10 +37,8 @@ class _SignUpPhoneEmailHomeState extends State<SignUpPhoneEmailHome>
         backgroundColor: Colors.white,
         leading: IconButton(
           onPressed: () {
-            Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (BuildContext bc) => SignupToEmail()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (BuildContext bc) => Signup()));
           },
           icon: Icon(Icons.arrow_back, color: Colors.black87, size: 28),
         ),
@@ -110,8 +104,8 @@ class _SignUpPhoneEmailHomeState extends State<SignUpPhoneEmailHome>
                   padding: EdgeInsets.symmetric(horizontal: 20.0),
                   child: TabBarView(
                     children: <Widget>[
-                      PhoneTab(),
-                      EmailTab(),
+                      NewPhoneTab(),
+                      NewEmailTab(),
                     ],
                     controller: tb,
                   ),

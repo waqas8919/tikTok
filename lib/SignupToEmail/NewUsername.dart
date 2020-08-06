@@ -1,25 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/SignupToEmail/NewEnterCode.dart';
 import 'package:tiktok_clone/SignupToEmail/entercode.dart';
 import 'package:tiktok_clone/SignupToEmail/signupphoneEmail.dart';
 import 'package:tiktok_clone/login.dart';
 import 'package:tiktok_clone/SignupToEmail/password.dart';
 
-class UserNameScreen extends StatelessWidget {
+class NewUserNameScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UserNameHome(),
+      home: NewUserNameHome(),
     );
   }
 }
 
-class UserNameHome extends StatefulWidget {
+class NewUserNameHome extends StatefulWidget {
   @override
   _UserNameHomeState createState() => _UserNameHomeState();
 }
 
-class _UserNameHomeState extends State<UserNameHome> {
+class _UserNameHomeState extends State<NewUserNameHome> {
   TextEditingController Usernamecontroller = new TextEditingController();
   String text = '';
   @override
@@ -34,8 +35,10 @@ class _UserNameHomeState extends State<UserNameHome> {
           child: InkWell(
             onTap: () {
 //              Navigator.pop(context);
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (BuildContext bc) => EnterCode()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext bc) => NewEnterCode()));
             },
             child: Text(
               "Skip",

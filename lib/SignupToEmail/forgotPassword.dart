@@ -1,24 +1,25 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/SignupToEmail/NewSignUpPhoneEmail.dart';
 import 'package:tiktok_clone/SignupToEmail/createUsername.dart';
 import 'package:tiktok_clone/SignupToEmail/entercode.dart';
 
-class PasswordScreen extends StatelessWidget {
+class ForgotPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PasswordScreenHome(),
+      home: ForgotPasswordScreenHome(),
     );
   }
 }
 
-class PasswordScreenHome extends StatefulWidget {
+class ForgotPasswordScreenHome extends StatefulWidget {
   @override
   _PasswordScreenHomeState createState() => _PasswordScreenHomeState();
 }
 
-class _PasswordScreenHomeState extends State<PasswordScreenHome> {
+class _PasswordScreenHomeState extends State<ForgotPasswordScreenHome> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,7 +30,10 @@ class _PasswordScreenHomeState extends State<PasswordScreenHome> {
           elevation: 0,
           leading: IconButton(
             onPressed: () {
-              Navigator.pop(context);
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext bc) => NewSignUpPhoneEmail()));
             },
             icon: Icon(
               Icons.arrow_back,
@@ -37,7 +41,7 @@ class _PasswordScreenHomeState extends State<PasswordScreenHome> {
             ),
           ),
           title: Text(
-            "Sign Up",
+            "Reset",
             style: TextStyle(
                 color: Colors.black,
                 fontSize: 17.0,
@@ -107,7 +111,7 @@ class _PasswordScreenHomeState extends State<PasswordScreenHome> {
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                    "Create password",
+                    "Forgot password",
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -116,13 +120,12 @@ class _PasswordScreenHomeState extends State<PasswordScreenHome> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 15,
                 ),
                 Container(
                   child: RichText(
                     text: TextSpan(
-                        text:
-                            "Use 8-20 characters from at least 2 catagories. letters,numbers,special characters",
+                        text: "We'll email you the code to reset password.",
                         style: TextStyle(
                             color: Colors.black38,
                             fontSize: 16,
@@ -137,7 +140,7 @@ class _PasswordScreenHomeState extends State<PasswordScreenHome> {
                   obscureText: true,
                   decoration: InputDecoration(
                       helperStyle: TextStyle(color: Colors.white),
-                      hintText: 'Password',
+                      hintText: 'Email Address',
                       hintStyle: TextStyle(
                           color: Colors.grey, fontWeight: FontWeight.bold),
                       suffix: Container(
@@ -173,7 +176,7 @@ class _PasswordScreenHomeState extends State<PasswordScreenHome> {
                                     UserNameScreen()));
                       },
                       child: Text(
-                        "Next",
+                        "Reset",
                         style: TextStyle(
                             color: Colors.black54,
                             fontFamily: 'Roboton',

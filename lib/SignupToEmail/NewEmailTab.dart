@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/SignupToEmail/forgotPassword.dart';
 import 'package:tiktok_clone/SignupToEmail/password.dart';
 import 'package:tiktok_clone/mycolors.dart';
 
-class EmailTab extends StatefulWidget {
+class NewEmailTab extends StatefulWidget {
   @override
   _EmailTabState createState() => _EmailTabState();
 }
 
-class _EmailTabState extends State<EmailTab> {
+class _EmailTabState extends State<NewEmailTab> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +17,7 @@ class _EmailTabState extends State<EmailTab> {
         child: Column(
           children: <Widget>[
             SizedBox(
-              height: 60.0,
+              height: 40.0,
             ),
             Container(
               child: TextField(
@@ -27,41 +28,36 @@ class _EmailTabState extends State<EmailTab> {
               ),
             ),
             SizedBox(
-              height: 20.0,
+              height: 15.0,
             ),
-            RichText(
-              text: TextSpan(
-                text: "By continuing, you agree to Musictok ",
-                style: TextStyle(color: Colors.grey, fontSize: 16),
-                children: <TextSpan>[
-                  TextSpan(
-                    text: 'Terms of Use',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 16,
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      decorationColor: Colors.black,
-                    ),
-                  ),
-                  TextSpan(
-                    text: " and confirm that you have read Musictok ",
-                    style: TextStyle(color: Colors.grey, fontSize: 16),
-                  ),
-                  TextSpan(
-                    text: 'Privacy Policy.',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      decoration: TextDecoration.underline,
-                      decorationColor: Colors.black,
-                    ),
-                  ),
-                ],
+            Container(
+              child: TextField(
+                decoration: InputDecoration(
+                    hintText: "Password",
+                    hintStyle: TextStyle(
+                        color: Colors.grey, fontWeight: FontWeight.bold)),
               ),
             ),
-
+            SizedBox(
+              height: 15.0,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (BuildContext bc) =>
+                                ForgotPasswordScreen()));
+                  },
+                  child: Text('Forgot Password?',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                ),
+              ],
+            ),
             // Container(
             //   alignment: Alignment.centerLeft,
             //   child: Column(
@@ -161,14 +157,14 @@ class _EmailTabState extends State<EmailTab> {
                           color: Colors.grey[200],
                           padding: EdgeInsets.symmetric(vertical: 10.0),
                           onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (BuildContext bc) =>
-                                        PasswordScreen()));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (BuildContext bc) =>
+                            //             PasswordScreen()));
                           },
                           child: Text(
-                            "Next",
+                            "Log in",
                             style: TextStyle(
                                 color: Colors.black38,
                                 fontSize: 18.0,

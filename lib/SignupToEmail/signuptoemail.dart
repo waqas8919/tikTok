@@ -78,7 +78,7 @@ class _emailHomeState extends State<emailHome> {
                   style: TextStyle(
                       color: Colors.black,
                       fontFamily: 'Roboton',
-                      fontSize: 22,
+                      fontSize: 23,
                       fontWeight: FontWeight.bold),
                 ),
               ),
@@ -91,9 +91,7 @@ class _emailHomeState extends State<emailHome> {
                 child: Text(
                   "Your birthday won't be shown publicly.",
                   style: TextStyle(
-                    color: Colors.black,
-                    fontFamily: 'Roboton',
-                  ),
+                      color: Colors.grey, fontFamily: 'Roboton', fontSize: 17),
                 ),
               ),
               SizedBox(
@@ -163,7 +161,7 @@ class _emailHomeState extends State<emailHome> {
                                     bottom: BorderSide(
                                         width: 1.0, color: Colors.red))),
                             child: Text(
-                              "17",
+                              "21",
                               style: TextStyle(
                                   color: Colors.black38,
                                   fontSize: 20,
@@ -178,7 +176,7 @@ class _emailHomeState extends State<emailHome> {
                                     bottom: BorderSide(
                                         width: 1.0, color: Colors.red))),
                             child: Text(
-                              "18",
+                              "22",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 20,
@@ -189,7 +187,7 @@ class _emailHomeState extends State<emailHome> {
                             alignment: Alignment.topCenter,
                             padding: EdgeInsets.symmetric(vertical: 10),
                             child: Text(
-                              "19",
+                              "23",
                               style: TextStyle(
                                   color: Colors.black38,
                                   fontSize: 20,

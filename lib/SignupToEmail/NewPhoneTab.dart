@@ -1,17 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/SignupToEmail/NewEnterCode.dart';
 import 'package:tiktok_clone/SignupToEmail/password.dart';
 import 'package:tiktok_clone/SignupToEmail/createUsername.dart';
 import 'package:tiktok_clone/SignupToEmail/selectcountry.dart';
 import 'package:tiktok_clone/SignupToEmail/entercode.dart';
 import 'package:tiktok_clone/mycolors.dart';
 
-class PhoneTab extends StatefulWidget {
+class NewPhoneTab extends StatefulWidget {
   @override
   _PhoneTabState createState() => _PhoneTabState();
 }
 
-class _PhoneTabState extends State<PhoneTab> {
+class _PhoneTabState extends State<NewPhoneTab> {
   var _countries = ['US +1', 'PK +92', 'AFG +93', 'IND +91'];
   var _countryItemSelected = 'US +1';
   @override
@@ -93,40 +94,7 @@ class _PhoneTabState extends State<PhoneTab> {
                 SizedBox(
                   height: 20.0,
                 ),
-              
-                RichText(
-                  text: TextSpan(
-                    text: "By continuing, you agree to Musictok ",
-                    style: TextStyle(color: Colors.grey, fontSize: 16),
-                    children: <TextSpan>[
-                      TextSpan(
-                        text: 'Terms of Use',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.black,
-                        ),
-                      ),
-                      TextSpan(
-                        text: " and confirm that you have read Musictok ",
-                        style: TextStyle(color: Colors.grey, fontSize: 16),
-                      ),
-                      TextSpan(
-                        text: 'Privacy Policy.',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              
+
                 // Container(
                 //   child: Column(
                 //     children: <Widget>[
@@ -239,7 +207,7 @@ class _PhoneTabState extends State<PhoneTab> {
                 SizedBox(
                   height: 25.0,
                 ),
-            
+
                 Padding(
                   padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                   child: Container(
@@ -257,7 +225,7 @@ class _PhoneTabState extends State<PhoneTab> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (BuildContext bc) =>
-                                            EnterCode()));
+                                            NewEnterCode()));
                               },
                               child: Text(
                                 "Send code",
@@ -273,7 +241,6 @@ class _PhoneTabState extends State<PhoneTab> {
                         ],
                       )),
                 )
-            
               ],
             ),
           ),

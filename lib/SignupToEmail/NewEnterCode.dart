@@ -2,16 +2,18 @@ import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:tiktok_clone/SignupToEmail/NewSignUpPhoneEmail.dart';
+import 'package:tiktok_clone/SignupToEmail/NewUsername.dart';
 import 'package:tiktok_clone/SignupToEmail/createUsername.dart';
 import 'package:tiktok_clone/SignupToEmail/password.dart';
 import 'package:tiktok_clone/SignupToEmail/signupphoneEmail.dart';
 
-class EnterCode extends StatefulWidget {
+class NewEnterCode extends StatefulWidget {
   @override
   _EnterCodeState createState() => _EnterCodeState();
 }
 
-class _EnterCodeState extends State<EnterCode> {
+class _EnterCodeState extends State<NewEnterCode> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -39,7 +41,7 @@ class _EnterCodeHomeState extends State<EnterCodeHome> {
             Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (BuildContext bc) => SignUpPhoneEmail()));
+                    builder: (BuildContext bc) => NewSignUpPhoneEmail()));
           },
           icon: Icon(
             Icons.arrow_back,
@@ -175,7 +177,7 @@ class _EnterCodeHomeState extends State<EnterCodeHome> {
                                   context,
                                   MaterialPageRoute(
                                       builder: (BuildContext bc) =>
-                                          UserNameScreen()));
+                                          NewUserNameScreen()));
                             },
                             child: Text(
                               "Next",
