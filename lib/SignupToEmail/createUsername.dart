@@ -3,6 +3,7 @@ import 'package:tiktok_clone/SignupToEmail/entercode.dart';
 import 'package:tiktok_clone/SignupToEmail/signupphoneEmail.dart';
 import 'package:tiktok_clone/login.dart';
 import 'package:tiktok_clone/SignupToEmail/password.dart';
+import 'package:tiktok_clone/main.dart';
 
 class UserNameScreen extends StatelessWidget {
   @override
@@ -35,7 +36,7 @@ class _UserNameHomeState extends State<UserNameHome> {
             onTap: () {
 //              Navigator.pop(context);
               Navigator.push(context,
-                  MaterialPageRoute(builder: (BuildContext bc) => EnterCode()));
+                  MaterialPageRoute(builder: (BuildContext bc) => MyApp()));
             },
             child: Text(
               "Skip",

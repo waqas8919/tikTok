@@ -28,7 +28,7 @@ class _EmailTabState extends State<NewEmailTab> {
               ),
             ),
             SizedBox(
-              height: 15.0,
+              height: 25.0,
             ),
             Container(
               child: TextField(
@@ -39,7 +39,7 @@ class _EmailTabState extends State<NewEmailTab> {
               ),
             ),
             SizedBox(
-              height: 15.0,
+              height: 20.0,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,

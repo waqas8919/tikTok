@@ -116,7 +116,7 @@ class _PasswordScreenHomeState extends State<PasswordScreenHome> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 15,
                 ),
                 Container(
                   child: RichText(

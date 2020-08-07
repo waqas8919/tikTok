@@ -156,12 +156,12 @@ class _EnterCodeHomeState extends State<EnterCodeHome> {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 25,
               ),
               Padding(
                 padding: const EdgeInsets.only(left: 15.0, right: 15.0),
                 child: Container(
-                    height: 60,
+                    height: 70,
                     child: Row(
                       children: <Widget>[
                         Expanded(
